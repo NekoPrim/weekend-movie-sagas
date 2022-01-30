@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+
+import Title from '../Title/Title';
 import './MovieList.css'
 
 function MovieList() {
@@ -27,7 +29,7 @@ function MovieList() {
 
     return (
         <main>
-            <h1>MovieList</h1>
+            <Title word={'Movie List'}/>
             <section className="movies">
                 {movies.map(movie => {
                     return (
