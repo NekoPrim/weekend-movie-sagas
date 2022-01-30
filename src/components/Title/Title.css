@@ -1,0 +1,7 @@
+.title {
+    align-items: center;
+    display: flex;
+    font-family: 'Londrina Sketch', cursive;
+    font-size: x-large;
+    justify-content: center;
+}
