@@ -15,10 +15,14 @@ function MovieList() {
 
     // function called with onClick
     const handleSelected = (movie) => {
-        console.log('in handleSelected with movie:', movie);
+        console.log('in handleSelected with movie:', movie.id);
 
         // send data to reducer
         dispatch({
+        //     type: 'FETCH_GENRES',
+        //     payload: movie.id
+        // },
+        // {
             type: 'SET_SELECTED_MOVIE',
             payload: movie
         });
