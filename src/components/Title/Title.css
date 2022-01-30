@@ -1,7 +1,9 @@
 .title {
     align-items: center;
     display: flex;
-    font-family: 'Londrina Sketch', cursive;
+    font-family: 'Zilla Slab Highlight', cursive;
     font-size: x-large;
+    height: 4rem;
     justify-content: center;
+    padding: 5px;
 }
