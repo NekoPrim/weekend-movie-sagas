@@ -1,4 +1,7 @@
 body {
+  background-image: url('../../../public/images/movie-background-film-frames-tape-reels-camera-vector-28149296.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0 auto;
 }
 
