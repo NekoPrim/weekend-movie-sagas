@@ -22,7 +22,7 @@ const MovieItem = ({movie}) => {
 
     return(
             <div key={movie.id} className="card">
-                <h3 className="movieName">{movie.title}</h3>
+                <h4 className="movieName">{movie.title}</h4>
                 <img
                     className="moviePoster"
                     src={movie.poster} 
