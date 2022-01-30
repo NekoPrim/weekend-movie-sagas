@@ -52,6 +52,16 @@ const genres = (state = [], action) => {
     }
 }
 
+// Used to store the selected movie
+const selectedMovie = (state = {}, action) => {
+    switch(action.type) {
+        case 'SET_SELECTED_MOVIE':
+            return action.payload;
+        default:
+            return state;
+    }
+}
+
 // Create one store that all components can use
 const storeInstance = createStore(
     combineReducers({
