@@ -16,6 +16,10 @@ const MovieItem = ({movie}) => {
         dispatch({
             type: 'SET_SELECTED_MOVIE',
             payload: movie
+        },
+        {
+            type: 'FETCH_GENRES',
+            payload: movie.id
         });
         history.push('/details');
     }
