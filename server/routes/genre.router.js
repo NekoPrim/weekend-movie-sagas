@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool')
 
-router.get('/', (req, res) => {
+router.get('/:id', (req, res) => {
   // Add query to get all genres
-  console.log('in GET genres router req.body', req.body);
+  console.log('in GET genres router req.params', req.params.id);
 
   // setup SQL for database
   const queryText = `
@@ -18,12 +18,11 @@ router.get('/', (req, res) => {
     WHERE "movies"."id" = $1;
   `;
 
-  const queryParams = [ req.body ];
+  const queryParams = [ req.params.id ];
 
   // send command to database
   pool.query(queryText, queryParams)
-    .then(() => {
-      res.sendStatus(200);
+    .then((result) => {
       res.send(result.rows);
     })
     .catch((err) => {

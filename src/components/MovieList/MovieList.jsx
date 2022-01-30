@@ -19,10 +19,6 @@ function MovieList() {
 
         // send data to reducer
         dispatch({
-        //     type: 'FETCH_GENRES',
-        //     payload: movie.id
-        // },
-        // {
             type: 'SET_SELECTED_MOVIE',
             payload: movie
         });

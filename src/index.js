@@ -10,12 +10,13 @@ import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 import { takeEvery, put } from 'redux-saga/effects';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
 
-    // yield takeEvery('FETCH_GENRES', fetchGenres);
+    yield takeEvery('FETCH_GENRES', fetchGenres);
 }
 
 function* fetchAllMovies() {
@@ -30,18 +31,22 @@ function* fetchAllMovies() {
     } 
 }
 
-// function* fetchGenres(action) {
-//     let id = action.payload;
-//     console.log('in fetchGenres index.js movieId:', id);
-//     // get genre data
-//     try {
-//         let response = yield axios.get(`/api/genre`, {id});
-//         console.log(response.data)
-//         yield put({ type: 'SET_GENRES', payload: response.data});
-//     } catch{
-//         console.log('get all error');
-//     }
-// }
+// function to get selected movie genres
+function* fetchGenres(action) {
+    let id = action.payload;
+    console.log('in fetchGenres index.js id:', id);
+
+
+    // get genre data
+    try {
+        let response = yield axios.get(`/api/genre/${id}`);
+        console.log('response from GET', response.data);
+        // 'then' send the response to the reducer
+        yield put({ type: 'SET_GENRES', payload: response.data});
+    } catch {
+        console.log('get all error');
+    }
+}
 
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
