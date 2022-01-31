@@ -1,6 +1,7 @@
 .title {
     align-items: center;
     display: flex;
+    color: gainsboro;
     font-family: 'Zilla Slab Highlight', cursive;
     font-size: x-large;
     height: 4rem;

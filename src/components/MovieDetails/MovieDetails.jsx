@@ -1,18 +1,37 @@
-import Title from '../Title/Title';
-import Button from '../Button/Button';
-import Details from '../Details/Details';
-import Genres from '../Genres/Genres';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
+import './MovieDetails.css';
 
 const MovieDetails = () => {
 
-    // render movie  and genres to DOM
+    // gain access to global variable
+    const movie = useSelector(store => store.selected);
+    console.log('in MovieDetails selected movie:', movie);
+
+    const dispatch = useDispatch();
+
+    // get data from server
+    useEffect(() => {
+        dispatch({
+            type: 'FETCH_GENRES',
+            payload: movie.id
+        });
+    }, []);
+
+    // append movie info onto DOM
     return(
         <div>
-            <Title word={'Details'}/>
-            {/* navigate back to MovieList */}
-            <Button />
-            <Details />
-            <Genres />
+            <h3 className="movieTitle">
+                {movie.title}
+            </h3>
+            <img 
+                className="moviePic"
+                src={movie.poster}
+            />
+            <h6 className="movieDesc">
+                {movie.description}
+            </h6>
         </div>
     );
 }
