@@ -1,0 +1,18 @@
+.movieTitle {
+    color: white;
+    font-family: 'Zilla Slab Highlight', cursive;
+    font-size: x-large;
+    text-align: center;
+}
+
+.moviePic {
+    border: 2px solid white;
+    border-radius: 5px;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}
+
+img {
+    border-radius: 5px;
+}
