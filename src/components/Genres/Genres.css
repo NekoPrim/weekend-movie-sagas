@@ -1,0 +1,18 @@
+.genreTitle {
+    color: gainsboro;
+    font-family: 'Zilla Slab Highlight', cursive;
+    font-size: 40px;
+    text-align: center;
+}
+
+.movieGenres {
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: gainsboro;
+    font-family: 'Amatic SC', cursive;
+    font-size: x-large;
+    margin: 1rem 20rem 1rem 20rem;
+    opacity: 0.8;
+    text-align: center;
+}

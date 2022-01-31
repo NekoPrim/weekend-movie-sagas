@@ -1,5 +1,7 @@
 import { useSelector } from 'react-redux';
 
+import './Genres.css';
+
 const Genres = () => {
 
     // gain access to global variable
@@ -8,10 +10,16 @@ const Genres = () => {
 
     return(
         <div>
-            <h1>Genres</h1>
+            <h1 className="genreTitle">
+                Genres
+            </h1>
+            <div className="movieGenres">
                 {genres.map((genre, i) => (
-                    <h3 key={i}>{genre.name}</h3>
+                    <h3 key={i}>
+                        {genre.name}
+                    </h3>
                 ))}
+            </div>
         </div>
     );
 }
