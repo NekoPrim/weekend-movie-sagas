@@ -1,7 +1,13 @@
 .movieTitle {
-    color: white;
-    font-family: 'Zilla Slab Highlight', cursive;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: gainsboro;
+    font-family: 'Amatic SC', cursive;
     font-size: x-large;
+    margin: 1rem 20rem 1rem 20rem;
+    opacity: 0.8;
+    padding: 10px 0 10px 0;
     text-align: center;
 }
 
@@ -15,4 +21,17 @@
 
 img {
     border-radius: 5px;
+}
+
+.movieDesc {
+    background: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    font-size: x-large;
+    margin: 1rem 10rem 0 10rem;
+    opacity: 0.8;
+    padding: 10px;
+    text-align: center;
 }
