@@ -1,5 +1,7 @@
 import { useHistory } from 'react-router-dom';
 
+import './Button.css'
+
 const Button = () => {
 
     const history = useHistory();
@@ -11,7 +13,9 @@ const Button = () => {
     }
 
     return(
-        <button onClick={handleBack}>Back</button>
+        <button className="backBtn" onClick={handleBack}>
+            Back
+        </button>
     );
 }
 

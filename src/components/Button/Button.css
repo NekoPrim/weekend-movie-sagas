@@ -1,0 +1,11 @@
+.backBtn {
+    background-color: darkorange;
+    border: 2px solid brown;
+    border-radius: 5px;
+    color: brown;
+    font-family: 'Amatic SC', cursive;
+    font-size: x-large;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}
